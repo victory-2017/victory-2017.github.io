@@ -38,6 +38,22 @@
 
         <!-- END Icons -->
 
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(76632192, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/76632192" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+
+
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144023646-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -47,7 +63,40 @@
             gtag("js", new Date());
             gtag("config", "UA-144023646-1");
         </script>
-        <meta property="og:title" content="Catch in 60 seconds project" />
+
+        <script>
+            var slideIndex = 1;
+           // showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+
+        <meta property="og:title" content="Победа 2017" />
         <meta property="og:image" content="https://repository-images.githubusercontent.com/194445383/571a9000-9cd0-11e9-9a72-2faf76647a01" />
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
@@ -88,23 +137,107 @@
                 background-color: deeppink;
                 border-color: deeppink;
             }
+
+            * {box-sizing:border-box}
+
+            /* Slideshow container */
+            .slideshow-container {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+            }
+
+            /* Hide the images by default */
+            .mySlides {
+                display: none;
+            }
+
+            /* Next & previous buttons */
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                margin-top: -22px;
+                padding: 16px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+            }
+
+            /* Position the "next button" to the right */
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+
+            /* Caption text */
+            .text {
+                color: #f2f2f2;
+                font-size: 15px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 8px;
+                width: 100%;
+                text-align: center;
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            .active, .dot:hover {
+                background-color: #717171;
+            }
+
+            /* Fading animation */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+                from {opacity: .4}
+                to {opacity: 1}
+            }
+
+            @keyframes fade {
+                from {opacity: .4}
+                to {opacity: 1}
+            }
+
+
         </style>
-        <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
- 
-    ym(76632192, "init", {
-         clickmap:true,
-         trackLinks:true,
-         accurateTrackBounce:true
-    });
- </script>
- <noscript><div><img src="https://mc.yandex.ru/watch/76632192" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
- <!-- /Yandex.Metrika counter -->
+        
     </head>
-    <body>
+    <body onload="showSlides(1);">
         <div class="container">
             <br />
 
@@ -114,12 +247,74 @@
                         <p class="web_page_title">
                             Победа 2017                            
                         </p>
-                        <img src="./meta/main_photo_web.jpg" alt="Сайт музей о победе 2017 года" class="logo" />
-                        <hr class="my-4" />
+                        
+                        <!-- Slideshow container -->
+                        <div class="slideshow-container">
+
+                            <!-- Full-width images with number and caption text -->
+                            <div class="mySlides fade">
+                                <div class="numbertext">1 / 7</div>
+                                <img src="./meta/main_photo_web.jpg" style="width:100%"/>
+                                <div class="text">Этот сайт посвящен победе 2017 года в войне в над преступным террористическим сообществом, которое провело
+                                    ряд террактов в отношении Российской Федерации и организовало попытку госпереворота с целью скрыть 
+                                    свои правонарушения в финансовой сфере</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">2 / 7</div>
+                                <img src="./meta/kommunarka_photo.jpg" style="width:100%"/>
+                                <div class="text">Война фактически началась 19 мая 2017 года, когда группа злоумышленников атаковала здание 
+                                    СК РФ по району Коммунарка</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">3 / 7</div>
+                                <img src="./meta/mgts_photo.jpg" style="width:100%"/>
+                                <div class="text">Ключевым фактором победы стал захват узла связи противника в июне 2017, после которого победа
+                                    над злоумышленниками стала вопросом времени </div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">4 / 7</div>
+                                <img src="./meta/car_photo.jpg" style="width:100%"/>
+                                <div class="text">Противник во время моего отдыха в Европе атаковал мою машину и позже захватил в плен группу моего сопровождения</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">5 / 7</div>
+                                <img src="./meta/mid_photo.jpg" style="width:100%"/>
+                                <div class="text">Противостояние в Москве в августе 2017 года было очень напряженным</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">6 / 7</div>
+                                <img src="./meta/prokuratura_photo.jpg" style="width:100%"/>
+                                <div class="text">Хотя в отличие от 1993 года противостояние было практически незаметно для обычных горожан</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <div class="numbertext">7 / 7</div>
+                                <img src="./meta/pobeda_photo.jpg" style="width:100%"/>
+                                <div class="text">В начале сентября 2017 года была одержана Победа. Остатки армии повстанцев ловили еще до конца года</div>
+                            </div>
+                        
+                            <!-- Next and previous buttons -->
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+                        <!-- The dots/circles -->
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                            <span class="dot" onclick="currentSlide(7)"></span>
+                        </div>
+
                         <p>
-                            Этот сайт посвящен победе 2017 года в войне в над преступным террористическим сообществом, которое провело
-                            ряд террактов в отношении Российской Федерации и организовало попытку госпереворота с целью скрыть 
-                            свои правонарушения в финансовой свере                            
+                            &nbsp;                            
                         </p>
                         <a class="btn btn-primary btn-lg" href="mailto:mike.yasnev@yandex.ru" role="button">Заказать экскурсию</a>
                         <a class="btn btn-primary btn-lg" href="https://github.com/Metroxe/one-html-page-challenge" role="button">Мобильное приложение</a>
@@ -131,48 +326,6 @@
                 </div>
             </div>
         </div>
-        <br />     
-        <div class="container">
-            <br />
-            <div class="card">
-                <div class="card-body">
-                    <div class="jumbotron">                        
-                        <img src="./meta/kommunarka_photo.jpg" alt="Терракт в Коммунарке" class="logo" />
-                        <hr class="my-4" />
-                        <p>
-                            Война фактически началась 19 мая 2017 года, когда группа злоумышленников атаковала здание 
-                            СК РФ по району Коммунарка                            
-                        </p>                                 
-                    </div> 
-                    <div class="jumbotron">                        
-                        <img src="./meta/mgts_photo.jpg" alt="Захват узла связи противника" class="logo" />
-                        <hr class="my-4" />
-                        <p>
-                            Ключевым фактором победы стал захват узла связи противника в июне 2017, после которого победа
-                            над злоумышленниками стала вопросом времени                           
-                        </p>                                 
-                    </div> 
-                    <div class="jumbotron">                        
-                        <img src="./meta/car_photo.jpg" alt="Атака машины" class="logo" />
-                        <hr class="my-4" />
-                        <p>
-                            Противник во время моего отдыха в Европе атаковал мою машину и позже захватил в плен группу моего сопровождения
-                        </p>                                 
-                    </div>
-                    <div class="jumbotron">                        
-                        <p>
-                            Противостояние в Москве в августе 2017 года было очень напряженным. Подробности вы можете узнать в ходе экскурсии
-                        </p>
-                        <img src="./meta/mid_photo.jpg" alt="Москва 2017 МИД" class="logo" />
-                        <hr class="my-4" />
-                        <img src="./meta/prokuratura_photo.jpg" alt="Москва 2017 Прокуратура" class="logo" />
-                        <hr class="my-4" />
-                        <img src="./meta/pobeda_photo.jpg" alt="Москва 2017 Прокуратура" class="logo" />
-                        <hr class="my-4" />
-                                                         
-                    </div>                    
-                </div>
-            </div>
-        </div>  
+        
     </body>
 </html>
