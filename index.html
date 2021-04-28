@@ -1,331 +1,146 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Сайт - музей победы 2017 года</title>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./meta/favicon.ico">
 
-        <!-- Icons -->
+    <title>Сайт - музей победы 2017 года</title>
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="./meta/favicon.ico" />
+    <!-- Bootstrap core CSS -->
+    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Android Chrome -->
-        <link rel="icon" type="image/png" sizes="192x192" href="./meta/android-icon-192x192.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="./meta/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="96x96" href="./meta/favicon-96x96.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="./meta/favicon-16x16.png" />
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="./assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-        <!-- Square Windows tiles -->
-        <meta name="msapplication-square70x70logo" content="./meta/ms-icon-70x70.png" />
-        <meta name="msapplication-square144x144logo" content="./meta/ms-icon-144x144.png" />
-        <meta name="msapplication-square150x150logo" content="./meta/ms-icon-150x150.png" />
-        <meta name="msapplication-square310x310logo" content="./meta/ms-icon-310x310.png" />
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./assets/js/ie-emulation-modes-warning.js"></script>
 
-        <!-- Rectangular Windows tile -->
-        <meta name="msapplication-wide310x150logo" content="./meta/ms-icon-310x150.png" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-        <!-- Web App Manifest -->
-        <link rel="manifest" href="./meta/site.webmanifest" />
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
 
-        <!-- Windows tile theme color -->
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="msapplication-TileImage" content="./meta/ms-icon-144x144.png" />
-        <meta name="msapplication-config" content="./meta/browserconfig.config" />
-
-        <!-- Android theme color -->
-        <meta name="theme-color" content="#ffffff" />
-        <link rel="mask-icon" href="./meta/safari-pinned-tab.svg" color="#ffa500" />
-
-        <!-- END Icons -->
-
-<!-- Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
- 
-    ym(76632192, "init", {
-         clickmap:true,
-         trackLinks:true,
-         accurateTrackBounce:true
-    });
- </script>
- <noscript><div><img src="https://mc.yandex.ru/watch/76632192" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
- <!-- /Yandex.Metrika counter -->
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(76632192, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/76632192" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144023646-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-            gtag("config", "UA-144023646-1");
-        </script>
-
-        <script>
-            var slideIndex = 1;
-           // showSlides(slideIndex);
-
-            // Next/previous controls
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            // Thumbnail image controls
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                if (n > slides.length) {slideIndex = 1}
-                if (n < 1) {slideIndex = slides.length}
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";
-                dots[slideIndex-1].className += " active";
-            }
-        </script>
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    
+     <!-- Jumbotron -->
+     <div class="jumbotron">
+      <h1>ПОБЕДА 2017</h1>
+      <p class="lead">Этот сайт посвящен победе 2017 года в войне в над преступным террористическим сообществом</p>
+      <a class="btn btn-primary btn-lg" href="mailto:mike.yasnev@yandex.ru" role="button">Заказать экскурсию</a>
+      <a class="btn btn-primary btn-lg" href="https://github.com/Metroxe/one-html-page-challenge" role="button">Мобильное приложение</a>
+    </div>
 
 
-        <meta property="og:title" content="Победа 2017" />
-        <meta property="og:image" content="https://repository-images.githubusercontent.com/194445383/571a9000-9cd0-11e9-9a72-2faf76647a01" />
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-
-        <style>
-            .jumbotron {
-                text-align: center;
-            }
-
-            .web_page_title {
-                font-size: 37px;
-            }
-
-            .logo {
-                max-width: 70%;
-            }
-
-            body {
-                background: repeating-linear-gradient(45deg, #000000, #1e1e1e 10px, #15191d 10px, #15191d 20px);
-            }
-
-            .card-text:nth-of-type(2)::before {
-                display: inline-block;
-                content: "Supported in:";
-                margin-right: 0.5em;
-            }
-
-            .btn.btn-success {
-                color: #ffffff;
-                background-color: hotpink;
-                border-color: hotpink;
-            }
-
-            .btn.btn-success:hover,
-            .btn.btn-success:focus,
-            .btn.btn-success:active,
-            .btn.btn-success.active {
-                color: #ffffff;
-                background-color: deeppink;
-                border-color: deeppink;
-            }
-
-            * {box-sizing:border-box}
-
-            /* Slideshow container */
-            .slideshow-container {
-                max-width: 1000px;
-                position: relative;
-                margin: auto;
-            }
-
-            /* Hide the images by default */
-            .mySlides {
-                display: none;
-            }
-
-            /* Next & previous buttons */
-            .prev, .next {
-                cursor: pointer;
-                position: absolute;
-                top: 50%;
-                width: auto;
-                margin-top: -22px;
-                padding: 16px;
-                color: white;
-                font-weight: bold;
-                font-size: 18px;
-                transition: 0.6s ease;
-                border-radius: 0 3px 3px 0;
-                user-select: none;
-            }
-
-            /* Position the "next button" to the right */
-            .next {
-                right: 0;
-                border-radius: 3px 0 0 3px;
-            }
-
-            /* On hover, add a black background color with a little bit see-through */
-            .prev:hover, .next:hover {
-                background-color: rgba(0,0,0,0.8);
-            }
-
-            /* Caption text */
-            .text {
-                color: #f2f2f2;
-                font-size: 15px;
-                padding: 8px 12px;
-                position: absolute;
-                bottom: 8px;
-                width: 100%;
-                text-align: center;
-            }
-
-            /* Number text (1/3 etc) */
-            .numbertext {
-                color: #f2f2f2;
-                font-size: 12px;
-                padding: 8px 12px;
-                position: absolute;
-                top: 0;
-            }
-
-            /* The dots/bullets/indicators */
-            .dot {
-                cursor: pointer;
-                height: 15px;
-                width: 15px;
-                margin: 0 2px;
-                background-color: #bbb;
-                border-radius: 50%;
-                display: inline-block;
-                transition: background-color 0.6s ease;
-            }
-
-            .active, .dot:hover {
-                background-color: #717171;
-            }
-
-            /* Fading animation */
-            .fade {
-                -webkit-animation-name: fade;
-                -webkit-animation-duration: 1.5s;
-                animation-name: fade;
-                animation-duration: 1.5s;
-            }
-
-            @-webkit-keyframes fade {
-                from {opacity: .4}
-                to {opacity: 1}
-            }
-
-            @keyframes fade {
-                from {opacity: .4}
-                to {opacity: 1}
-            }
-
-
-        </style>
-        
-    </head>
-    <body onload="showSlides(1);">
-        <div class="container">
-            <br />
-
-            <div class="card">
-                <div class="card-body">
-                    <div class="jumbotron">
-                        <p class="web_page_title">
-                            Победа 2017                            
-                        </p>
-                        
-                        <!-- Slideshow container -->
-                        <div class="slideshow-container">
-
-                            <!-- Full-width images with number and caption text -->
-                            <div class="mySlides fade">
-                                <div class="numbertext">1 / 7</div>
-                                <img src="./meta/main_photo_web.jpg" style="width:100%"/>
-                                <div class="text">Этот сайт посвящен победе 2017 года в войне в над преступным террористическим сообществом, которое провело
-                                    ряд террактов в отношении Российской Федерации и организовало попытку госпереворота с целью скрыть 
-                                    свои правонарушения в финансовой сфере</div>
-                            </div>
-
-                            <div class="mySlides fade">
-                                <div class="numbertext">2 / 7</div>
-                                <img src="./meta/kommunarka_photo.jpg" style="width:100%"/>
-                                <div class="text">Война фактически началась 19 мая 2017 года, когда группа злоумышленников атаковала здание 
-                                    СК РФ по району Коммунарка</div>
-                            </div>
-
-                            <div class="mySlides fade">
-                                <div class="numbertext">3 / 7</div>
-                                <img src="./meta/mgts_photo.jpg" style="width:100%"/>
-                                <div class="text">Ключевым фактором победы стал захват узла связи противника в июне 2017, после которого победа
-                                    над злоумышленниками стала вопросом времени </div>
-                            </div>
-
-                            <div class="mySlides fade">
-                                <div class="numbertext">4 / 7</div>
-                                <img src="./meta/car_photo.jpg" style="width:100%"/>
-                                <div class="text">Противник во время моего отдыха в Европе атаковал мою машину и позже захватил в плен группу моего сопровождения</div>
-                            </div>
-
-                            <div class="mySlides fade">
-                                <div class="numbertext">5 / 7</div>
-                                <img src="./meta/mid_photo.jpg" style="width:100%"/>
-                                <div class="text">Противостояние в Москве в августе 2017 года было очень напряженным</div>
-                            </div>
-
-                            <div class="mySlides fade">
-                                <div class="numbertext">6 / 7</div>
-                                <img src="./meta/prokuratura_photo.jpg" style="width:100%"/>
-                                <div class="text">Хотя в отличие от 1993 года противостояние было практически незаметно для обычных горожан</div>
-                            </div>
-
-                            <div class="mySlides fade">
-                                <div class="numbertext">7 / 7</div>
-                                <img src="./meta/main_photo_web_align_final_caption.jpg" style="width:100%"/>
-                                <div class="text">В начале сентября 2017 года была одержана Победа. Остатки повстанцев ловили еще до конца года</div>
-                            </div>
-                        
-                            <!-- Next and previous buttons -->
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                        </div>
-                        <!-- The dots/circles -->
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                            <span class="dot" onclick="currentSlide(4)"></span>
-                            <span class="dot" onclick="currentSlide(5)"></span>
-                            <span class="dot" onclick="currentSlide(6)"></span>
-                            <span class="dot" onclick="currentSlide(7)"></span>
-                        </div>
-
-                        <p>
-                            &nbsp;                            
-                        </p>
-                        <a class="btn btn-primary btn-lg" href="mailto:mike.yasnev@yandex.ru" role="button">Заказать экскурсию</a>
-                        <a class="btn btn-primary btn-lg" href="https://github.com/Metroxe/one-html-page-challenge" role="button">Мобильное приложение</a>
-                        <p>
-                            Возможен заказ пешей экскурсии по центру Москвы или экскурсии на автомобиле по ключевым местам                           
-                        </p>
-                    </div>
-                    
-                </div>
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        <li data-target="#myCarousel" data-slide-to="6"></li>
+        <li data-target="#myCarousel" data-slide-to="7"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active" data-interval="10000">
+          <div align="center">
+            <img class="first-slide" src="meta/main_photo_web_align.jpg" alt="First slide">
+          </div>          
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Победа 2017</h1>
+              <p>Победа над сообществом, которое провело
+                ряд террактов в отношении России и организовало попытку госпереворота с целью скрыть 
+                свои правонарушения в финансовой сфере
+              </p>
             </div>
+          </div>
         </div>
-        
-    </body>
+        <div class="item" data-interval="5000">
+          <div align="center">
+            <img class="second-slide" src="./meta/kommunarka_photo_with_caption.jpg" alt="Коммунарка">
+          </div>
+        </div>
+        <div class="item" data-interval="5000">
+          <div align="center">
+            <img class="third-slide" src="./meta/mgts_photo_with_caption.jpg" alt="Первые шаги к победе">
+          </div>
+        </div>
+        <div class="item" data-interval="5000">
+          <div align="center">
+            <img class="forth-slide" src="./meta/car_photo_with_caption.jpg" alt="Атака на автомобиль">
+          </div>
+        </div>
+        <div class="item" data-interval="5000">
+          <div align="center">
+            <img class="fifth-slide" src="./meta/mid_photo_with_caption.jpg" alt="Август 2017 в Москве">
+          </div>
+        </div>
+        <div class="item" data-interval="5000">
+          <div align="center">
+            <img class="sixth-slide" src="./meta/prokuratura_photo_with_caption.jpg" alt="Уникальная спецоперация">
+          </div>
+        </div>
+        <div class="item" data-interval="5000">
+          <div align="center">
+            <img class="seventh-slide" src="./meta/main_photo_web_align_final_caption.jpg" alt="Победа 2017">
+          </div>
+        </div>        
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="./assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
